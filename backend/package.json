@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.ts"
+    "start": "node build/dist/index.js",
+    "heroku-prebuild": "npm install",
+    "build": "tsc -p .",
+    "dev": "ts-node src/index.ts"
   },
   "keywords": [],
   "author": "",
@@ -30,6 +33,7 @@
     "@types/passport": "^1.0.6",
     "@types/passport-local": "^1.0.33",
     "ts-node": "^10.0.0",
+    "tsc": "^2.0.3",
     "typescript": "^4.3.4"
   }
 }
